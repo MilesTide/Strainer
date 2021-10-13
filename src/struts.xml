@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	 <constant name="struts.i18n.encoding" value="utf-8"/>
+	 <constant name="struts.devMode" value="true"/>
+	 
+	 <package name="com.main" extends="struts-default" namespace="/">
+	 	<action name="main" class="mainAction" method="execute">
+	 		<result name="error">/showResult_error.jsp</result>
+	 	</action>
+	 </package>
+	 
+	 <package name="start" extends="struts-default" namespace="/">
+	 	<action name="start" class="startAction" method="start">
+	 		<result>/openListener.jsp</result>
+	 	</action>
+	 	<action name="end" class="startAction" method="end">
+	 		<result>/openListener.jsp</result>
+	 	</action>
+	 </package>
+	 
+	 <package name="config" extends="struts-default" namespace="/">
+	 	<action name="configFlag" class="configAction" method="configFlag">
+	 		<result>/configflag.jsp</result>
+	 	</action>
+	 </package>
+	 
+	  <package name="function" extends="struts-default" namespace="/">
+	 	<action name="addBadWords" class="functionAction" method="addBadWords">
+	 		<result>/addBadWords.jsp</result>
+	 	</action>
+	 </package>
+</struts>
